@@ -35,7 +35,8 @@ class Roster:
                 print(row['first'], row['middle'], row['last'], sep=" ", end=", ")
                 print(row['birth'])
 
-if __name__=='__main__':
+                
+if __name__ == '__main__':
     Roster().main()
     if len(argv) != 2:
         print("Invalid command")
