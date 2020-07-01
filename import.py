@@ -12,11 +12,7 @@ def store_data():
     filename = argv[-1]
     with open(filename, 'r') as f:
         reader = csv.reader(f)
-        header = next(reader)
-
-        # for index, head in enumerate(header):
-        #   print(index, head)
-
+        
         for row in reader:
             std_names.append(row[0])
             std_house.append(row[1])
@@ -55,8 +51,10 @@ def store_data():
         # Incrementing student id
         std_id += 1
 
-if __name__=='__main__':
+        
+if __name__ == '__main__':
     if len(argv) != 2:
         print("Invalid Command\nUsage: python import.py filename")
         exit(1)
+        
     store_data()
